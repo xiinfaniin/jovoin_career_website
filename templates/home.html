@@ -1,0 +1,39 @@
+<!DOCTYPE html/>
+<html>
+  <head>
+    <title>Hormuud careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      #banner {
+        width:99.5%;
+        height: 320px;
+        object-fit:over;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" >
+    <h1 class="text-center mt-2 mb-4">{{company_name}} careers</h1>
+    <img id="banner" src="static/banner.jpeg" alt="Jovain logo">
+    <h2 class="text-center mt-2 mb-4">About {{company_name}}</h2>
+    <p class="lead">We are Somalia’s private sector employer, with over 12,000 Somali shareholders from across the world, and more than 35,000 employees.
+    We are Somalia’s most trusted operator and we always strive to meet international standards for safety and security.
+    We were the first to introduce mobile money into Somalia, the first telecoms company to be licensed by the Somali Central Bank, and the first to gain the GSMA’s Mobile Money Certification.
+    We are proud of our history. Emerging from a civil war, with just over 250 shareholders and ten customer service centres, our vision to transform the lives of our communities has driven us connect all Somalis through our services.</p>
+    
+<h2 class="text-center mt-2 mb-4">open positions at {{company_name}} </h2>
+    <p>
+    <div>  
+      {% for job in jobs %}
+      {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>  
+    </p>
+<div class="text-center">
+<button class="btn btn-primary btn-lg">contact us</button>
+      <p class="lead mt-4">Copy-right 2024 {{company_name}} jobs</p>
+ </div>
+  </body>
+</html>
